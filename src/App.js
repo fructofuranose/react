@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+//import Article from "./components/Article";
+//import { Article } from "./index";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import ToggleButton from "./components/Toggle";
+import { Article, Counter, TextInput } from "./components/index";
 
-export default App;
+function app(){
+
+  // useEffect(()=>{
+    
+  // })
+return(
+  <div>
+    <Article
+    title={"React入門"}
+    content={"propsについて"}
+    />
+    <Article
+    title={"componentの使い方"}
+    content={'componentはちょくせつ文字列を入力せずに親に記入'}
+    />
+    <TextInput/>
+    <Counter/>
+    <ToggleButton/>
+
+
+  </div>
+);
+
+};
+
+export default app;
